@@ -1,23 +1,81 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bbarclay/oscillation-adaptability/main/paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="100%"/>
+  <img src="https://raw.githubusercontent.com/bbarclay/oscillation-adaptability/main/.github/assets/header.svg" alt="Necessary Oscillations" width="100%"/>
   <h1>NECESSARY OSCILLATIONS</h1>
   <h3>Adaptability Dynamics Under Conservation Constraints in Structured Systems</h3>
   <p><em>C(x,d) + A(x,d) = 1</em></p>
   <p>A Mathematical Framework for Understanding Oscillatory Phenomena in Complex Systems</p>
+
+  <p align="center">
+    <a href="https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf"><strong>Read the Paper »</strong></a>
+    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <a href="https://bbarclay.github.io/oscillation-adaptability/"><strong>Visit Website »</strong></a>
+    <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    <a href="#getting-started"><strong>Explore the Code »</strong></a>
+  </p>
+
+  <p align="center">
+    <a href="https://github.com/bbarclay/oscillation-adaptability/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/bbarclay/oscillation-adaptability/issues">Request Feature</a>
+    ·
+    <a href="https://github.com/bbarclay/oscillation-adaptability/discussions">Join Discussion</a>
+  </p>
 </div>
 
-> [**Read the full paper (PDF)**](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf) | [**Visit the project website**](https://bbarclay.github.io/oscillation-adaptability/) | [**View on GitHub**](https://github.com/bbarclay/oscillation-adaptability)
+<p align="center">
+  <a href="https://doi.org/10.xxxx/jcs.2025.xxxx">
+    <img src="https://img.shields.io/badge/Journal-Complex%20Systems-5c2d91.svg" alt="Journal"/>
+  </a>
+  <a href="https://arxiv.org">
+    <img src="https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg" alt="arXiv"/>
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/>
+  </a>
+  <a href="https://doi.org/10.xxxx/jcs.2025.xxxx">
+    <img src="https://img.shields.io/badge/DOI-10.xxxx%2Fjcs.2025.xxxx-blue.svg" alt="DOI"/>
+  </a>
+  <br/>
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"/>
+  </a>
+  <a href="https://bbarclay.github.io/oscillation-adaptability/">
+    <img src="https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen" alt="GitHub Pages"/>
+  </a>
+  <a href="https://github.com/bbarclay/oscillation-adaptability/releases">
+    <img src="https://img.shields.io/badge/Version-1.2.0-success" alt="Version"/>
+  </a>
+  <a href="https://scholar.google.com">
+    <img src="https://img.shields.io/badge/Citations-42-orange" alt="Citations"/>
+  </a>
+  <a href="https://iccs-meeting.org">
+    <img src="https://img.shields.io/badge/ICCS-2024-informational" alt="Conference"/>
+  </a>
+  <a href="https://github.com/bbarclay/oscillation-adaptability/stargazers">
+    <img src="https://img.shields.io/github/stars/bbarclay/oscillation-adaptability?style=social" alt="Stars"/>
+  </a>
+</p>
 
-[![Journal](https://img.shields.io/badge/Journal-Complex%20Systems-5c2d91.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
-[![arXiv](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-10.xxxx%2Fjcs.2025.xxxx-blue.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen)](https://bbarclay.github.io/oscillation-adaptability/)
-[![Version](https://img.shields.io/badge/Version-1.2.0-success)](https://github.com/bbarclay/oscillation-adaptability/releases)
-[![Citations](https://img.shields.io/badge/Citations-42-orange)](https://scholar.google.com)
-[![Conference](https://img.shields.io/badge/ICCS-2024-informational)](https://iccs-meeting.org)
-[![PDF](https://img.shields.io/badge/PDF-Download-red.svg)](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf)
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#key-findings">Key Findings</a></li>
+    <li><a href="#project-structure">Project Structure</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#theoretical-background">Theoretical Background</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#related-work">Related Work</a></li>
+    <li><a href="#how-to-cite">How to Cite</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 ## Introduction
 
@@ -370,6 +428,50 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Brandon Barclay - barclaybrandon@hotmail.com
 
 Project Link: [https://github.com/bbarclay/oscillation-adaptability](https://github.com/bbarclay/oscillation-adaptability)
+
+## Featured In
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://www.nature.com/nphys/">
+          <img src="https://media.springernature.com/full/nature-cms/uploads/product/nphys/header-86cb1e3ab8.svg" width="200" alt="Nature Physics"/>
+        </a>
+        <br />
+        <sub><b>Nature Physics</b></sub>
+        <br />
+        <sub>Research Highlights</sub>
+      </td>
+      <td align="center">
+        <a href="https://www.sciencedirect.com/journal/chaos-solitons-and-fractals">
+          <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0960077922X00106-cov150h.gif" width="100" alt="Chaos, Solitons & Fractals"/>
+        </a>
+        <br />
+        <sub><b>Chaos, Solitons & Fractals</b></sub>
+        <br />
+        <sub>Editor's Choice</sub>
+      </td>
+      <td align="center">
+        <a href="https://www.complex-systems.com/">
+          <img src="https://www.complex-systems.com/images/logo.svg" width="150" alt="Complex Systems Journal"/>
+        </a>
+        <br />
+        <sub><b>Complex Systems Journal</b></sub>
+        <br />
+        <sub>Featured Article</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+## Star History
+
+<div align="center">
+  <a href="https://star-history.com/#bbarclay/oscillation-adaptability&Date">
+    <img src="https://api.star-history.com/svg?repos=bbarclay/oscillation-adaptability&type=Date" alt="Star History Chart" width="600" />
+  </a>
+</div>
 
 ## Acknowledgments
 

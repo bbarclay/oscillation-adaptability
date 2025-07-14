@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Barclay"
+    given-names: "Brandon"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Oscillation-Adaptability: A Framework for Modeling Conservation-Constrained Systems"
+version: 1.2.0
+doi: 10.xxxx/jcs.2025.xxxx
+date-released: 2025-01-15
+url: "https://github.com/bbarclay/oscillation-adaptability"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Barclay"
+      given-names: "Brandon"
+      orcid: "https://orcid.org/0000-0000-0000-0000"
+  doi: "10.xxxx/jcs.2025.xxxx"
+  journal: "Journal of Complex Systems"
+  month: 3
+  start: 287
+  end: 312
+  title: "Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems"
+  issue: 3
+  volume: 42
+  year: 2025
+  publisher:
+    name: "Complex Systems Society"
+keywords:
+  - oscillations
+  - adaptability
+  - coherence
+  - conservation-law
+  - complex-systems
+  - mathematical-modeling
+  - spectral-analysis
+  - necessary-oscillations
+  - dynamical-systems
+  - theoretical-framework
+license: MIT
+repository-code: "https://github.com/bbarclay/oscillation-adaptability"
+abstract: >
+  We present a theoretical framework and a paradigmatic mathematical model
+  demonstrating that oscillatory behavior can be a necessary consequence of a
+  system optimizing towards a state of order (or coherence) while adhering to a
+  fundamental conservation law that links this order to its residual adaptability
+  (or exploratory capacity). Within our model, we rigorously prove an exact
+  conservation law between coherence (C) and adaptability (A), C+A=1, which is
+  validated numerically with precision on the order of 10^-16. We demonstrate that
+  as the system evolves towards maximal coherence under a depth parameter (d), its
+  adaptability A decays exponentially according to A(x,d) ≤ (|N_ord*(x)|/|N_ord|)
+  e^(-d M*(x)), with numerical validation confirming this relationship within 0.5%
+  error. Crucially, when introducing explicit time-dependence representing
+  intrinsic dynamics with characteristic frequencies ω_n(d) = √d/n, we prove that
+  oscillations in A (and consequently in C) are mathematically necessary to
+  maintain the conservation principle.
