@@ -345,3 +345,59 @@ def analyze_modal_contributions(model: AdaptabilityModel,
         results.append(mode_contributions)
     
     return pd.DataFrame(results)
+def find_mode_crossover(model: AdaptabilityModel,
+                         mode_a: int,
+                         mode_b: int,
+                         x_range: Tuple[float, float] = (-0.5, 0.5),
+                         num_points: int = 1000,
+                         tol: float = 1e-5) -> List[float]:
+    """Find approximate configuration values where two modes have equal decay exponents."""
+    x_values = np.linspace(x_range[0], x_range[1], num_points)
+    diff = [model.M_n(x, mode_a) - model.M_n(x, mode_b) for x in x_values]
+    crossovers = []
+    for i in range(len(diff) - 1):
+        if np.isinf(diff[i]) or np.isinf(diff[i+1]):
+            continue
+        if diff[i] == 0:
+            crossovers.append(x_values[i])
+        if diff[i] * diff[i+1] < 0:
+            # Linear interpolation to find zero crossing
+            x1, x2 = x_values[i], x_values[i+1]
+            f1, f2 = diff[i], diff[i+1]
+            root = x1 - f1 * (x2 - x1) / (f2 - f1)
+            if x_range[0] <= root <= x_range[1]:
+                crossovers.append(root)
+    # Remove near-duplicates
+    unique = []
+    for x in crossovers:
+        if not any(abs(x - u) < tol for u in unique):
+            unique.append(x)
+    return unique
+
+
+def verify_complexity_ceiling(model: AdaptabilityModel,
+                               x_range: Tuple[float, float] = (-0.5, 0.5),
+                               num_points: int = 2000,
+                               tol: float = 1e-6) -> List[float]:
+    """Search for configurations where three or more modes share the same decay exponent."""
+    x_values = np.linspace(x_range[0], x_range[1], num_points)
+    triple_points = []
+    n_modes = len(model.n_ord)
+    if n_modes < 3:
+        return triple_points
+    for x in x_values:
+        m_vals = [model.M_n(x, n) for n in model.n_ord]
+        if any(np.isinf(v) for v in m_vals):
+            continue
+        for i in range(n_modes):
+            for j in range(i + 1, n_modes):
+                for k in range(j + 1, n_modes):
+                    if (abs(m_vals[i] - m_vals[j]) < tol and
+                        abs(m_vals[i] - m_vals[k]) < tol):
+                        triple_points.append(x)
+    # Unique points only
+    unique = []
+    for x in triple_points:
+        if not any(abs(x - u) < tol for u in unique):
+            unique.append(x)
+    return unique

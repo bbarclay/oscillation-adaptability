@@ -20,7 +20,9 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__f
 from computational_utils import (
     verify_conservation_law,
     verify_exponential_decay,
-    verify_temporal_oscillations
+    verify_temporal_oscillations,
+    find_mode_crossover,
+    verify_complexity_ceiling
 )
 
 # Ensure figures directory exists
@@ -197,6 +199,34 @@ def validate_temporal_oscillations():
     return df
 
 
+def validate_mode_crossovers():
+    """Validate existence of mode crossovers and locate critical points."""
+    print("\n==== Validating Mode Crossovers and Critical Points ====")
+
+    model = AdaptabilityModel([1, 2])
+    crossovers = find_mode_crossover(model, 1, 2, x_range=(0, 0.25))
+
+    for x_c in crossovers:
+        print(f"  Detected crossover near x = {x_c:.6f}")
+
+    return pd.DataFrame({'Crossover': crossovers})
+
+
+def validate_complexity_ceiling():
+    """Validate absence of triple-mode resonances (complexity ceiling)."""
+    print("\n==== Validating Complexity Ceiling ====")
+
+    model = AdaptabilityModel([1, 2, 3])
+    triple_points = verify_complexity_ceiling(model)
+
+    if triple_points:
+        print(f"  Triple-mode resonance detected at {triple_points}")
+    else:
+        print("  No triple-mode resonance found (complexity ceiling observed).")
+
+    return pd.DataFrame({'TriplePoint': triple_points})
+
+
 def run_all_validations():
     """Run all validation tests and return compiled results."""
     print("===== STARTING COMPREHENSIVE MODEL VALIDATION =====")
@@ -205,6 +235,8 @@ def run_all_validations():
     conservation_results = validate_conservation_law()
     exponential_decay_results = validate_exponential_decay()
     temporal_oscillation_results = validate_temporal_oscillations()
+    crossover_results = validate_mode_crossovers()
+    ceiling_results = validate_complexity_ceiling()
 
     end_time = time.time()
     print(f"\n===== VALIDATION COMPLETE =====")
@@ -213,7 +245,9 @@ def run_all_validations():
     return {
         'conservation': conservation_results,
         'exponential_decay': exponential_decay_results,
-        'temporal_oscillations': temporal_oscillation_results
+        'temporal_oscillations': temporal_oscillation_results,
+        'mode_crossovers': crossover_results,
+        'complexity_ceiling': ceiling_results
     }
 
 
