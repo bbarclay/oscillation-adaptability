@@ -1,0 +1,72 @@
+title: "Research Collaboration"
+labels: ["collaboration", "research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Research Collaboration Proposal
+        
+        Use this template to propose research collaborations related to the Oscillation Adaptability framework.
+        
+        Successful collaborations typically include clear research questions, methodology, and expected outcomes.
+  
+  - type: textarea
+    id: research_question
+    attributes:
+      label: Research Question
+      description: What specific research question or hypothesis would you like to explore?
+      placeholder: Clearly state the research question or hypothesis you're interested in investigating...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: approach
+    attributes:
+      label: Proposed Approach
+      description: How do you propose to investigate this question?
+      placeholder: Describe your methodology, tools, or techniques you plan to use...
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field of Application
+      description: Which field would this research primarily apply to?
+      options:
+        - Neuroscience
+        - Ecology
+        - Economics
+        - Quantum Systems
+        - Machine Learning
+        - Complex Systems Theory
+        - Other (please specify in Additional Information)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expertise
+    attributes:
+      label: Your Expertise
+      description: What relevant expertise or resources do you bring to this collaboration?
+      placeholder: Describe your background, skills, or access to data/tools that would contribute to this research...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Proposed Timeline
+      description: What is your expected timeline for this collaboration?
+      placeholder: Provide a rough estimate of when you'd like to start, major milestones, and potential completion...
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any other details that would be helpful for potential collaborators to know.
+      placeholder: Include any other relevant information about your proposal...
+    validations:
+      required: false

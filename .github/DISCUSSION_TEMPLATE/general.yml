@@ -1,0 +1,45 @@
+title: "General Discussion"
+labels: ["discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome to the Oscillation Adaptability Discussions
+        
+        This is a place to ask questions, share ideas, and discuss the theoretical framework and its applications.
+        
+        Before posting, please check if your question has already been answered in existing discussions.
+  
+  - type: textarea
+    id: topic
+    attributes:
+      label: Discussion Topic
+      description: What would you like to discuss about the Oscillation Adaptability framework?
+      placeholder: Share your thoughts, questions, or ideas here...
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Topic Category
+      description: What area does your discussion relate to?
+      options:
+        - Theoretical Framework
+        - Mathematical Model
+        - Code Implementation
+        - Applications
+        - Visualization
+        - Paper Discussion
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any additional information or context that might help others understand your discussion topic.
+      placeholder: Include any relevant background, references, or specific sections of the paper/code you're referring to.
+    validations:
+      required: false
